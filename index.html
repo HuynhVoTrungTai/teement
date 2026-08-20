@@ -1,220 +1,274 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="TEEMENT — POD Design, Print, Pack and Service. Turn your ideas into finished products.">
-  <title>TEEMENT — POD Design • Print • Service</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TEEMENT | POD Design, Print &amp; Fulfillment Partner</title>
+  <meta name="description" content="TEEMENT is a trusted print-on-demand partner for design, printing, packaging, and customer support — turning your ideas into finished products, start to finish.">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="TEEMENT | POD Design, Print &amp; Fulfillment Partner">
+  <meta property="og:description" content="From first sketch to finished product — design, print-on-demand, printing, packaging and 24/7 support, all in one place.">
+  <meta property="og:image" content="https://teement.com/logo-teement.jpg">
+
+  <link rel="icon" href="https://teement.com/logo-teement.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@800;900&amp;family=Space+Grotesk:wght@500;600;700&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <a class="skip-link" href="#main-content">Skip to content</a>
+  <a class="skip-link" href="#main">Skip to main content</a>
 
-  <header class="site-header" data-header>
-    <div class="container nav-wrap">
-      <a class="brand" href="#top" aria-label="TEEMENT home">
-        <span class="brand-mark" aria-hidden="true">T</span>
+  <!-- ============ HEADER ============ -->
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a href="#top" class="brand" aria-label="TEEMENT — back to top">
+        <img class="brand-mark" src="https://teement.com/logo-teement.jpg" alt="" width="36" height="36">
         <span class="brand-word">TEEMENT</span>
       </a>
 
-      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open navigation menu" data-menu-toggle>
-        <span></span><span></span><span></span>
-      </button>
-
-      <nav class="primary-nav" id="primary-nav" aria-label="Primary navigation" data-nav>
-        <a href="#services">Services</a>
-        <a href="#about">About</a>
-        <a href="#process">Process</a>
-        <a href="#products">Products</a>
-        <a href="#contact">Contact</a>
-        <a class="nav-cta" href="#contact">Ready to make a design.</a>
+      <nav class="primary-nav" id="primaryNav" aria-label="Primary">
+        <ul>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#process">Process</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
       </nav>
+
+      <div class="header-actions">
+        <a href="#contact" class="btn btn-primary btn-sm">Get started</a>
+        <button type="button" class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="primaryNav">
+          <span class="visually-hidden">Menu</span>
+          <span class="nav-toggle-bar" aria-hidden="true"></span>
+          <span class="nav-toggle-bar" aria-hidden="true"></span>
+          <span class="nav-toggle-bar" aria-hidden="true"></span>
+        </button>
+      </div>
     </div>
   </header>
 
-  <main id="main-content">
-    <section class="hero" id="top" aria-labelledby="hero-title">
-      <div class="hero-grid container">
-        <div class="hero-copy reveal">
-          <p class="eyebrow"><span></span> POD Design • Print • Service</p>
-          <h1 id="hero-title">Turn ideas<br><em>into products.</em></h1>
-          <p class="hero-lead">From concept and design to printing, packaging, and customer support, TEEMENT handles the full journey from idea to finished product.</p>
-          <div class="hero-actions">
-            <a class="button button-primary" href="#contact">Ready to make a design. <span aria-hidden="true">↗</span></a>
-            <a class="button button-secondary" href="#services">Explore Services</a>
-          </div>
-          <p class="hero-note">A streamlined POD workflow for custom product projects.</p>
-        </div>
+  <main id="main">
 
-        <div class="hero-art reveal" aria-label="Abstract TEEMENT product and print visual">
-          <div class="art-card art-card-back"></div>
-          <div class="art-card art-card-mid"></div>
-          <div class="art-main">
-            <div class="art-topline">TEEMENT / 2026</div>
-            <div class="art-logo">TEEMENT</div>
-            <div class="art-shape shape-one"></div>
-            <div class="art-shape shape-two"></div>
-            <div class="art-caption">IDEA → DESIGN → PRINT → PACK</div>
-          </div>
-          <div class="art-badge"><strong>24h</strong><span>response</span></div>
-        </div>
-      </div>
-      <div class="hero-rule" aria-hidden="true"></div>
-    </section>
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <p class="eyebrow"><svg class="reg-mark" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M12 1v6M12 17v6M1 12h6M17 12h6"/></svg>POD Design &middot; Print &middot; Service</p>
 
-    <section class="stats" aria-label="TEEMENT highlights">
-      <div class="container stats-grid">
-        <div class="stat"><strong>5K+</strong><span>Orders</span></div>
-        <div class="stat"><strong>98%</strong><span>Satisfaction</span></div>
-        <div class="stat"><strong>24h</strong><span>Response</span></div>
-        <p class="stats-aside">The numbers currently published by TEEMENT's live landing page.</p>
+        <h1 class="hero-heading" data-text="Turn ideas into products">
+          Turn ideas into <span class="hero-heading-accent">products</span>
+        </h1>
+
+        <p class="hero-sub">TEEMENT is your trusted print-on-demand partner for design, printing, packaging, and customer support. Send us your file — we handle every step from there.</p>
+
+        <div class="hero-actions">
+          <a href="#contact" class="btn btn-primary">Get a free quote</a>
+          <a href="#services" class="btn btn-ghost">View services</a>
+        </div>
       </div>
     </section>
 
-    <section class="section services" id="services" aria-labelledby="services-title">
+    <!-- ============ SERVICES ============ -->
+    <section class="services" id="services" aria-labelledby="services-heading">
       <div class="container">
-        <div class="section-heading reveal">
-          <p class="kicker">01 / SERVICES</p>
-          <div>
-            <h2 id="services-title">Everything in one place.</h2>
-            <p>TEEMENT manages each stage from concept to a product delivered to your customer.</p>
-          </div>
-        </div>
+        <header class="section-head">
+          <p class="eyebrow">Services</p>
+          <h2 id="services-heading">Everything in one place</h2>
+          <p class="section-lede">From concept to delivery, TEEMENT handles every step of the process smoothly — so you only need to manage one relationship, not five vendors.</p>
+        </header>
 
-        <div class="service-grid">
-          <article class="service-card reveal">
-            <span class="service-index">01</span><span class="service-icon" aria-hidden="true">✦</span>
+        <ul class="service-grid">
+          <li class="service-card">
+            <span class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 32 32"><path d="M20 6l6 6-14 14H6v-6L20 6z"/><path d="M17 9l6 6"/></svg>
+            </span>
             <h3>Design</h3>
-            <p>Professional, trend-aware design prepared with the printing process in mind.</p>
-            <span class="service-arrow" aria-hidden="true">↗</span>
-          </article>
-          <article class="service-card reveal">
-            <span class="service-index">02</span><span class="service-icon" aria-hidden="true">◎</span>
+            <p>Professional, on-trend artwork, optimized for clean, accurate printing.</p>
+          </li>
+          <li class="service-card">
+            <span class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 32 32"><path d="M12 8l4-3 4 3M9 10l7-4 7 4-1 15a2 2 0 0 1-2 2H12a2 2 0 0 1-2-2z"/><path d="M12 8a4 4 0 0 0 8 0"/></svg>
+            </span>
             <h3>POD</h3>
-            <p>Print on Demand with no inventory requirement and flexible quantities.</p>
-            <span class="service-arrow" aria-hidden="true">↗</span>
-          </article>
-          <article class="service-card reveal">
-            <span class="service-index">03</span><span class="service-icon" aria-hidden="true">▣</span>
+            <p>Print-on-demand production — no inventory to hold, no minimums to hit.</p>
+          </li>
+          <li class="service-card">
+            <span class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 32 32"><path d="M16 4c-2 3-3 5-3 7a3 3 0 0 0 6 0c0-2-1-4-3-7z"/><circle cx="16" cy="22" r="6"/></svg>
+            </span>
             <h3>Print</h3>
-            <p>Modern printing technology for vibrant, durable results.</p>
-            <span class="service-arrow" aria-hidden="true">↗</span>
-          </article>
-          <article class="service-card reveal">
-            <span class="service-index">04</span><span class="service-icon" aria-hidden="true">□</span>
+            <p>Modern printing technology for vivid color and finishes that last wash after wash.</p>
+          </li>
+          <li class="service-card">
+            <span class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 32 32"><path d="M5 11l11-5 11 5-11 5-11-5z"/><path d="M5 11v11l11 5 11-5V11M16 16v11"/></svg>
+            </span>
             <h3>Pack</h3>
-            <p>Professional packaging designed to protect each finished product.</p>
-            <span class="service-arrow" aria-hidden="true">↗</span>
-          </article>
-          <article class="service-card reveal service-card-wide">
-            <span class="service-index">05</span><span class="service-icon" aria-hidden="true">◌</span>
+            <p>Careful, professional packaging that keeps every order protected in transit.</p>
+          </li>
+          <li class="service-card">
+            <span class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 32 32"><path d="M6 18v-3a10 10 0 0 1 20 0v3"/><rect x="4" y="17" width="6" height="8" rx="2"/><rect x="22" y="17" width="6" height="8" rx="2"/><path d="M26 25a6 6 0 0 1-6 4h-2"/></svg>
+            </span>
             <h3>Service</h3>
-            <p>Dedicated support built around quick issue resolution and a smoother customer experience.</p>
-            <span class="service-arrow" aria-hidden="true">↗</span>
-          </article>
-        </div>
+            <p>Dedicated 24/7 support that resolves questions and issues quickly.</p>
+          </li>
+        </ul>
       </div>
     </section>
 
-    <section class="section about" id="about" aria-labelledby="about-title">
-      <div class="container about-grid">
-        <div class="about-panel reveal" aria-hidden="true">
-          <div class="panel-label">TEEMENT / FROM SKETCH TO PRODUCT</div>
-          <div class="panel-number">A → Z</div>
-          <div class="panel-line"></div>
-          <div class="panel-footer">Design / Print / Pack / Service</div>
+    <!-- ============ ABOUT ============ -->
+    <section class="about" id="about" aria-labelledby="about-heading">
+      <div class="container about-inner">
+        <div class="about-copy">
+          <p class="eyebrow">About TEEMENT</p>
+          <h2 id="about-heading">Where ideas come to life</h2>
+          <p>We do more than print shirts, bags, or anything else you can dream up. TEEMENT is a team of makers who turn rough sketches into products that make customers say &ldquo;wow.&rdquo;</p>
+          <p>With modern printing technology and a streamlined process behind us, all you have to do is send your file — we take care of everything from A to Z.</p>
         </div>
-        <div class="about-copy reveal">
-          <p class="kicker">02 / ABOUT</p>
-          <h2 id="about-title">Where ideas become real products.</h2>
-          <p>TEEMENT is more than a printing service. We are a team focused on turning rough sketches and product ideas into finished pieces that customers can connect with.</p>
-          <p>With modern printing technology and a streamlined workflow, you can send your file or brief and let TEEMENT take care of the work from A to Z.</p>
-          <div class="about-meta"><span>TEEMENT</span><span>POD Design • Print • Service</span></div>
-        </div>
-      </div>
-    </section>
 
-    <section class="section process" id="process" aria-labelledby="process-title">
-      <div class="container">
-        <div class="section-heading reveal">
-          <p class="kicker">03 / PROCESS</p>
-          <div>
-            <h2 id="process-title">Four clear steps.</h2>
-            <p>No unnecessary complexity. Share your request, and the work moves forward step by step.</p>
+        <dl class="stat-row">
+          <div class="stat">
+            <dt>Orders fulfilled</dt>
+            <dd>5K+</dd>
           </div>
-        </div>
+          <div class="stat">
+            <dt>Customer satisfaction</dt>
+            <dd>98%</dd>
+          </div>
+          <div class="stat">
+            <dt>Average response time</dt>
+            <dd>24h</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- ============ PROCESS ============ -->
+    <section class="process" id="process" aria-labelledby="process-heading">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow">Process</p>
+          <h2 id="process-heading">Four simple steps</h2>
+          <p class="section-lede">No complications, no back-and-forth. Send your request and get your product.</p>
+        </header>
 
         <ol class="process-list">
-          <li class="process-item reveal">
-            <div class="process-num">01</div>
-            <div><h3>Share Your Idea</h3><p>Share your concept, design file, or project brief.</p></div>
+          <li class="process-step">
+            <span class="step-num">01</span>
+            <h3>Share your idea</h3>
+            <p>Send your concept, design files, or a short creative brief.</p>
           </li>
-          <li class="process-item reveal">
-            <div class="process-num">02</div>
-            <div><h3>Design &amp; Approval</h3><p>The design team refines the work for your approval before printing.</p></div>
+          <li class="process-step">
+            <span class="step-num">02</span>
+            <h3>Design &amp; approval</h3>
+            <p>Our design team finalizes the artwork for your sign-off before anything is printed.</p>
           </li>
-          <li class="process-item reveal">
-            <div class="process-num">03</div>
-            <div><h3>Printing &amp; Packaging</h3><p>High-quality printing followed by careful packaging.</p></div>
+          <li class="process-step">
+            <span class="step-num">03</span>
+            <h3>Print &amp; package</h3>
+            <p>High-quality printing, followed by careful, protective packaging.</p>
           </li>
-          <li class="process-item reveal">
-            <div class="process-num">04</div>
-            <div><h3>Delivery</h3><p>Products are shipped to the destination with order tracking.</p></div>
+          <li class="process-step">
+            <span class="step-num">04</span>
+            <h3>Delivery</h3>
+            <p>Shipped to your door, with real-time order tracking along the way.</p>
           </li>
         </ol>
       </div>
     </section>
 
-    <section class="section products" id="products" aria-labelledby="products-title">
-      <div class="container product-gateway reveal">
-        <div>
-          <p class="kicker">04 / PRODUCTS</p>
-          <h2 id="products-title">Need a ready-to-order product?</h2>
-          <p>TEEMENT also operates a product catalog for customers looking to browse available apparel and other printed products.</p>
-        </div>
-        <a class="button button-dark" href="https://teement.com/" target="_blank" rel="noopener">Browse the TEEMENT Store <span aria-hidden="true">↗</span></a>
-      </div>
-    </section>
+    <!-- ============ CONTACT ============ -->
+    <section class="contact" id="contact" aria-labelledby="contact-heading">
+      <div class="container contact-inner">
+        <div class="contact-intro">
+          <p class="eyebrow">Contact</p>
+          <h2 id="contact-heading">Ready to bring your idea to life?</h2>
+          <p>Leave your details or send a message — the TEEMENT team will get back to you within 24 hours.</p>
 
-    <section class="cta" id="contact" aria-labelledby="contact-title">
-      <div class="container cta-inner reveal">
-        <div>
-          <p class="kicker">05 / CONTACT</p>
-          <h2 id="contact-title">Ready to turn your idea into reality?</h2>
-          <p>Leave your information or message TEEMENT directly. The current landing page states that the team will respond within 24 hours.</p>
+          <ul class="contact-details">
+            <li>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18v12H3z"/><path d="M3 7l9 6 9-6"/></svg>
+              <a href="mailto:hello@teement.com">hello@teement.com</a>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h4l2 5-3 2a12 12 0 0 0 6 6l2-3 5 2v4a2 2 0 0 1-2 2C10.5 21 3 13.5 3 5a2 2 0 0 1 2-2z"/></svg>
+              <a href="tel:+84900000000">+84 900 000 000</a>
+            </li>
+            <li class="contact-social">
+              <a href="#" aria-label="TEEMENT on Facebook">Facebook</a>
+              <a href="#" aria-label="TEEMENT on Instagram">Instagram</a>
+            </li>
+          </ul>
         </div>
-        <div class="cta-actions">
-          <a class="button button-light" href="tel:+84900000000">Call TEEMENT <span aria-hidden="true">↗</span></a>
-          <a class="button button-outline-light" href="#top">Back to top</a>
-        </div>
+
+        <form class="contact-form" id="contactForm" novalidate>
+          <div class="form-row">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" autocomplete="name" required>
+          </div>
+          <div class="form-row">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" autocomplete="email" required>
+          </div>
+          <div class="form-row">
+            <label for="message">Tell us about your idea</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">Send message</button>
+          <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+        </form>
       </div>
     </section>
   </main>
 
+  <!-- ============ FOOTER ============ -->
   <footer class="site-footer">
     <div class="container footer-grid">
-      <div>
-        <a class="brand brand-footer" href="#top" aria-label="TEEMENT home"><span class="brand-mark" aria-hidden="true">T</span><span class="brand-word">TEEMENT</span></a>
-        <p>POD Design • Print • Service<br>Turn ideas into quality products.</p>
+      <div class="footer-brand">
+        <a href="#top" class="brand" aria-label="TEEMENT — back to top">
+          <img class="brand-mark" src="https://teement.com/logo-teement.jpg" alt="" width="30" height="30">
+          <span class="brand-word">TEEMENT</span>
+        </a>
+        <p>POD Design &middot; Print &middot; Service<br>Turning ideas into quality products.</p>
       </div>
-      <div>
-        <h3>Services</h3>
-        <a href="#services">Design</a><a href="#services">POD</a><a href="#services">Print</a><a href="#services">Pack</a><a href="#services">Service</a>
-      </div>
-      <div>
-        <h3>Company</h3>
-        <a href="#about">About</a><a href="#process">Process</a><a href="#contact">Contact</a><a href="#products">Products</a>
-      </div>
-      <div>
+
+      <nav class="footer-col" aria-labelledby="footer-services-heading">
+        <h3 id="footer-services-heading">Services</h3>
+        <ul>
+          <li><a href="#services">Design</a></li>
+          <li><a href="#services">POD</a></li>
+          <li><a href="#services">Print</a></li>
+          <li><a href="#services">Pack</a></li>
+          <li><a href="#services">Service</a></li>
+        </ul>
+      </nav>
+
+      <nav class="footer-col" aria-labelledby="footer-company-heading">
+        <h3 id="footer-company-heading">Company</h3>
+        <ul>
+          <li><a href="#about">About us</a></li>
+          <li><a href="#process">Process</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer-col">
         <h3>Contact</h3>
-        <a href="tel:+84900000000">+84 900 000 000</a>
-        <p class="footer-note">Use the verified contact details configured for the production site before launch.</p>
+        <ul>
+          <li><a href="mailto:hello@teement.com">hello@teement.com</a></li>
+          <li><a href="tel:+84900000000">+84 900 000 000</a></li>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Instagram</a></li>
+        </ul>
       </div>
     </div>
-    <div class="container footer-bottom"><span>© 2026 TEEMENT. All rights reserved.</span><span>Made by TEEMENT Team</span></div>
+
+    <div class="container footer-bottom">
+      <p>&copy; 2026 TEEMENT. All rights reserved.</p>
+      <p>Made with <span aria-hidden="true">🔥</span> by the TEEMENT team.</p>
+    </div>
   </footer>
 
   <script src="js/script.js"></script>
