@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initMobileNav();
   initScrollState();
   initContactForm();
+  initInspectionDeterrents();
 });
 
 /* ---------- Mobile navigation ---------- */
@@ -131,4 +132,16 @@ function submitLead(data) {
   // or form service is connected. Kept async so the swap is a
   // one-function change with no other code to touch.
   return new Promise((resolve) => setTimeout(resolve, 500));
+}
+function initInspectionDeterrents() {
+  document.addEventListener("contextmenu", (event) => event.preventDefault());
+
+  document.addEventListener("keydown", (event) => {
+    const key = event.key.toUpperCase();
+    const isBlocked =
+      key === "F12" ||
+      (event.ctrlKey && event.shiftKey && ["I", "J", "C"].includes(key)) ||
+      (event.ctrlKey && key === "U");
+    if (isBlocked) event.preventDefault();
+  });
 }
