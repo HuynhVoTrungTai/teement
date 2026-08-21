@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initScrollState();
   initContactForm();
   initInspectionDeterrents();
+  initThemeToggle();
 });
 
 /* ---------- Mobile navigation ---------- */
@@ -133,6 +134,14 @@ function submitLead(data) {
   // one-function change with no other code to touch.
   return new Promise((resolve) => setTimeout(resolve, 500));
 }
+
+/* ---------- Optional: reduce casual right-click / DevTools use ----------
+   Honest note: this cannot stop anyone from viewing or copying the
+   site's code — all HTML/CSS/JS is sent to every visitor's browser by
+   definition. It's trivial to bypass (disabling JavaScript defeats it
+   entirely; DevTools can still be opened from the browser's own menu).
+   It only removes a couple of shortcuts for casual visitors.
+   To remove: delete this function and its call above. */
 function initInspectionDeterrents() {
   document.addEventListener("contextmenu", (event) => event.preventDefault());
 
@@ -143,5 +152,45 @@ function initInspectionDeterrents() {
       (event.ctrlKey && event.shiftKey && ["I", "J", "C"].includes(key)) ||
       (event.ctrlKey && key === "U");
     if (isBlocked) event.preventDefault();
+  });
+}
+
+
+/* ---------- Dark mode toggle ----------
+   The initial theme is applied as early as possible by a small
+   inline script in index.html's <head> — before this file even
+   loads — so there's no flash of the wrong theme on page load.
+   This function only wires up the button, keeps the choice in
+   localStorage for next visit, and tints the browser chrome
+   (theme-color meta) to match. */
+function initThemeToggle() {
+  const toggle = document.getElementById("themeToggle");
+  const meta = document.querySelector('meta[name="theme-color"]');
+  if (!toggle) return;
+
+  const THEME_KEY = "teement-theme";
+  const LIGHT_COLOR = "#ffffff";
+  const DARK_COLOR = "#17141f";
+
+  const isDark = () => document.documentElement.getAttribute("data-theme") === "dark";
+
+  const reflectState = () => {
+    const dark = isDark();
+    toggle.setAttribute("aria-pressed", String(dark));
+    if (meta) meta.setAttribute("content", dark ? DARK_COLOR : LIGHT_COLOR);
+  };
+
+  reflectState();
+
+  toggle.addEventListener("click", () => {
+    const next = isDark() ? "light" : "dark";
+    document.documentElement.setAttribute("data-theme", next);
+    try {
+      localStorage.setItem(THEME_KEY, next);
+    } catch (e) {
+      /* Storage unavailable (e.g. private browsing) — theme still
+         switches for this visit, it just won't be remembered. */
+    }
+    reflectState();
   });
 }
